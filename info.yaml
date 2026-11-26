@@ -1,10 +1,10 @@
 # Tiny Tapeout project information (Wokwi project)
 project:
-  wokwi_id:     392873974467527681       # Set this to the ID of your Wokwi project (the number from the project's URL)
-  title:        "PILIPINAS_IC"      # Project title
-  author:       "Alexander Co Abad and Dino Dominic Ligutan"      # Your name
+  wokwi_id:     481740336442682369       # Set this to the ID of your Wokwi project (the number from the project's URL)
+  title:        "Quizbee_5buzzer_with_SRLatch"      # Project title
+  author:       "Alexander Co Abad"      # Your name
   discord:      "alexandercoabad_25756"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  "7-seg Display for PILIPINASLASALLE"      # One line description of what your project does
+  description:  "Quizbee_5buzzer_with_SRLatch"      # One line description of what your project does
   language:     "Wokwi" # other examples include SystemVerilog, Amaranth, VHDL, etc
   clock_hz:     1       # Clock frequency in Hz (or 0 if not applicable)
 
@@ -16,14 +16,14 @@ project:
 # This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
 pinout:
   # Inputs
-  ui[0]: "BCD Bit 3 (A)"
-  ui[1]: "BCD Bit 2 (A)"
-  ui[2]: "BCD Bit 1 (A)"
-  ui[3]: "BCD Bit 0 (A)"
-  ui[4]: ""
+  ui[0]: "b1"
+  ui[1]: "b2"
+  ui[2]: "b3"
+  ui[3]: "b4"
+  ui[4]: "b5"
   ui[5]: ""
   ui[6]: ""
-  ui[7]: "Manual Input Mode"
+  ui[7]: "reset"
 
   # Outputs
   uo[0]: "segment a"
