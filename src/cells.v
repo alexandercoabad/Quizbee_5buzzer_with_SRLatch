@@ -6,7 +6,6 @@ It's only needed for Wokwi designs.
 
 `define default_netname none
 
-(* keep_hierarchy *)
 module buffer_cell (
     input wire in,
     output wire out
@@ -14,7 +13,6 @@ module buffer_cell (
     assign out = in;
 endmodule
 
-(* keep_hierarchy *)
 module and_cell (
     input wire a,
     input wire b,
@@ -24,7 +22,6 @@ module and_cell (
     assign out = a & b;
 endmodule
 
-(* keep_hierarchy *)
 module or_cell (
     input wire a,
     input wire b,
@@ -34,7 +31,6 @@ module or_cell (
     assign out = a | b;
 endmodule
 
-(* keep_hierarchy *)
 module xor_cell (
     input wire a,
     input wire b,
@@ -44,7 +40,6 @@ module xor_cell (
     assign out = a ^ b;
 endmodule
 
-(* keep_hierarchy *)
 module nand_cell (
     input wire a,
     input wire b,
@@ -54,27 +49,6 @@ module nand_cell (
     assign out = !(a&b);
 endmodule
 
-(* keep_hierarchy *)
-module nor_cell (
-    input wire a,
-    input wire b,
-    output wire out
-    );
-
-    assign out = !(a | b);
-endmodule
-
-(* keep_hierarchy *)
-module xnor_cell (
-    input wire a,
-    input wire b,
-    output wire out
-    );
-
-    assign out = !(a ^ b);
-endmodule
-
-(* keep_hierarchy *)
 module not_cell (
     input wire in,
     output wire out
@@ -83,7 +57,6 @@ module not_cell (
     assign out = !in;
 endmodule
 
-(* keep_hierarchy *)
 module mux_cell (
     input wire a,
     input wire b,
@@ -94,7 +67,6 @@ module mux_cell (
     assign out = sel ? b : a;
 endmodule
 
-(* keep_hierarchy *)
 module dff_cell (
     input wire clk,
     input wire d,
@@ -108,26 +80,6 @@ module dff_cell (
 
 endmodule
 
-(* keep_hierarchy *)
-module dffr_cell (
-    input wire clk,
-    input wire d,
-    input wire r,
-    output reg q,
-    output wire notq
-    );
-
-    assign notq = !q;
-
-    always @(posedge clk or posedge r) begin
-        if (r)
-            q <= 0;
-        else
-            q <= d;
-    end
-endmodule
-
-(* keep_hierarchy *)
 module dffsr_cell (
     input wire clk,
     input wire d,

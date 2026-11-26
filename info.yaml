@@ -1,39 +1,46 @@
-# Tiny Tapeout project information (Wokwi project)
+# Tiny Tapeout project information
 project:
-  wokwi_id:     https://wokwi.com/projects/481740336442682369       # Set this to the ID of your Wokwi project (the number from the project's URL)
-  title:        "Quizbee_5buzzer_with_SRLatch"      # Project title
-  author:       "Alexander Co Abad"      # Your name
+  title:        "PILIPINASLASALLE"      # Project title
+  author:       "Alexander Co Abad and Dino Dominic Ligutan"      # Your name
   discord:      "alexandercoabad_25756"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  "Quizbee_5buzzer_with_SRLatch"      # One line description of what your project does
-  language:     "Wokwi" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  description:  "7-seg Display for PILIPINASLASALLE"      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
   clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
 
   # How many tiles your design occupies? A single tile is about 167x108 uM.
-  tiles: "micro"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2 or 6x2
 
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_wokwi_392873974467527681"
+
+  # List your project's source files here.
+  # Source files must be in ./src and you must list each source file separately, one per line.
+  # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
+  source_files:
+    - "project.v"
+    - "cells.v"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
-# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
 pinout:
   # Inputs
-  ui[0]: "b1"
-  ui[1]: "b2"
-  ui[2]: "b3"
-  ui[3]: "b4"
-  ui[4]: "b5"
-  ui[5]: "rst"
+  ui[0]: "BCD Bit 3 (A)"
+  ui[1]: "BCD Bit 2 (A)"
+  ui[2]: "BCD Bit 1 (A)"
+  ui[3]: "BCD Bit 0 (A)"
+  ui[4]: ""
+  ui[5]: ""
   ui[6]: ""
-  ui[7]: ""
+  ui[7]: "Manual Input Mode"
 
   # Outputs
-  uo[0]: "o1"
-  uo[1]: "o2"
-  uo[2]: "o3"
-  uo[3]: "o4"
-  uo[4]: "o5"
-  uo[5]: ""
-  uo[6]: ""
-  uo[7]: ""
+  uo[0]: "segment a"
+  uo[1]: "segment b"
+  uo[2]: "segment c"
+  uo[3]: "segment d"
+  uo[4]: "segment e"
+  uo[5]: "segment f"
+  uo[6]: "segment g"
+  uo[7]: "segment dp"
 
   # Bidirectional pins
   uio[0]: ""
